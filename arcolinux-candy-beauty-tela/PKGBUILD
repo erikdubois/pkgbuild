@@ -2,13 +2,14 @@
 pkgname=arcolinux-candy-beauty-tela-git
 _pkgname=arcolinux-candy-beauty-tela
 pkgver=22.02
-pkgrel=02
+pkgrel=04
 _destname1="/usr/share/icons/"
 _destname2="/usr/share/plasma/"
 pkgdesc="Beautyline icons completed for ArcoLinux + Candy icons + Tela"
 arch=('any')
 url="https://github.com/erikdubois/${_pkgname}.git"
 license=('GPL3')
+depends=('arcolinux-candy-beauty-git')
 makedepends=('git')
 provides=("${pkgname}")
 conflicts=()
