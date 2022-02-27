@@ -2,7 +2,7 @@
 pkgname=arcolinux-candy-beauty-arc-git
 _pkgname=arcolinux-candy-beauty-arc
 pkgver=22.02
-pkgrel=04
+pkgrel=06
 _destname1="/usr/share/icons/"
 _destname2="/usr/share/plasma/"
 pkgdesc="Beautyline icons completed for ArcoLinux + Candy icons + Arc icons"
@@ -19,8 +19,11 @@ sha256sums=('SKIP')
 package() {
 	install -dm 755 ${pkgdir}${_destname1}
 	install -dm 755 ${pkgdir}${_destname2}
+	#remove these three files or not - it has no effect
 	rm ${srcdir}/${_pkgname}/git*
 	rm ${srcdir}/${_pkgname}/setup*
-    cp -r ${srcdir}/${_pkgname}/.icons/* ${pkgdir}${_destname1}
-	cp -r ${srcdir}/${_pkgname}/.icons/* ${pkgdir}${_destname2}
+	rm ${srcdir}/${_pkgname}/README.md
+	cd arcolinux-candy-beauty-arc/iconfolder
+	cp -dr --no-preserve='ownership' arcolinux-candy-beauty-arc "${pkgdir}"/usr/share/icons/
+	cp -dr --no-preserve='ownership' arcolinux-candy-beauty-arc "${pkgdir}"/usr/share/plasma/
 }

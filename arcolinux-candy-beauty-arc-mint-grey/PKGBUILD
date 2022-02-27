@@ -23,6 +23,4 @@ package() {
 	rm ${srcdir}/${_pkgname}/setup*
     cp -r ${srcdir}/${_pkgname}/arcolinux-candy-beauty-arc-mint-grey/* ${pkgdir}${_destname1}
 	cp -r ${srcdir}/${_pkgname}/arcolinux-candy-beauty-arc-mint-grey/* ${pkgdir}${_destname2}
-    #cp -r ${srcdir}/${_pkgname}/${_pkgname}/* ${pkgdir}${_destname1}
-	#cp -r ${srcdir}/${_pkgname}/${_pkgname}d/* ${pkgdir}${_destname2}
 }

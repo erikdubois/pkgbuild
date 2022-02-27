@@ -1,8 +1,8 @@
 # Maintainer: Erik Dubois <erik.dubois@gmail.com>
-pkgname=papirus-dark-tela-git
-_pkgname=papirus-dark-tela
+pkgname=edu-papirus-dark-tela-git
+_pkgname=edu-papirus-dark-tela
 pkgver=22.02
-pkgrel=07
+pkgrel=08
 _destname1="/usr/share/icons/"
 _destname2="/usr/share/plasma/"
 pkgdesc="Papirus dark icons with Tela folders"
@@ -11,6 +11,7 @@ url="https://github.com/erikdubois/${_pkgname}.git"
 license=('GPL3')
 depends=('papirus-icon-theme')
 makedepends=('git')
+replaces=('papirus-dark-tela-git')
 provides=("${pkgname}")
 conflicts=()
 options=(!strip !emptydirs)
