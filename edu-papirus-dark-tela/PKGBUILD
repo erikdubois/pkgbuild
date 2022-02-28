@@ -2,7 +2,7 @@
 pkgname=edu-papirus-dark-tela-git
 _pkgname=edu-papirus-dark-tela
 pkgver=22.02
-pkgrel=08
+pkgrel=09
 _destname1="/usr/share/icons/"
 _destname2="/usr/share/plasma/"
 pkgdesc="Papirus dark icons with Tela folders"
