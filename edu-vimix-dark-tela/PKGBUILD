@@ -1,17 +1,17 @@
 # Maintainer: Erik Dubois <erik.dubois@gmail.com>
-pkgname=edu-candy-beauty-tela-git
-_pkgname=edu-candy-beauty-tela
-pkgver=22.02
-pkgrel=08
+pkgname=edu-vimix-dark-tela-git
+_pkgname=edu-vimix-dark-tela
+pkgver=22.03
+pkgrel=01
 _destname1="/usr/share/icons/"
 _destname2="/usr/share/plasma/"
-pkgdesc="Beautyline icons completed for ArcoLinux + Candy icons + Tela"
+pkgdesc="Vimix dark icons with Tela folders"
 arch=('any')
 url="https://github.com/erikdubois/${_pkgname}.git"
 license=('GPL3')
-depends=('arcolinux-candy-beauty-git')
+depends=('vimix-icon-theme-git')
 makedepends=('git')
-replaces=('arcolinux-candy-beauty-tela-git')
+replaces=()
 provides=("${pkgname}")
 conflicts=()
 options=(!strip !emptydirs)
@@ -22,6 +22,6 @@ package() {
 	install -dm 755 ${pkgdir}${_destname2}
 	rm ${srcdir}/${_pkgname}/git*
 	rm ${srcdir}/${_pkgname}/setup*
-    cp -r ${srcdir}/${_pkgname}/icons/* ${pkgdir}${_destname1}
-	cp -r ${srcdir}/${_pkgname}/icons/* ${pkgdir}${_destname2}
+    cp -r ${srcdir}/${_pkgname}${_destname1}/* ${pkgdir}${_destname1}
+	cp -r ${srcdir}/${_pkgname}${_destname1}/* ${pkgdir}${_destname2}
 }
