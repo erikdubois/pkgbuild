@@ -1,0 +1,25 @@
+# Maintainer: Erik Dubois <erik.dubois@gmail.com>
+pkgname=edu-skel-git
+_pkgname=edu-skel
+_destname1="/"
+_licensedir="/usr/share/arcolinux/licenses/"
+pkgver=22.12
+pkgrel=01
+pkgdesc="Desktop configuration"
+arch=('any')
+url="https://github.com/erikdubois/edu-skel"
+license=('GPL3')
+makedepends=('git')
+depends=('bash')
+provides=("${pkgname}")
+options=(!strip !emptydirs)
+source=(${_pkgname}::"git+https://github.com/erikdubois/${_pkgname}.git")
+sha256sums=('SKIP')
+install='readme.install'
+package() {
+	#install -dm755 ${pkgdir}${_licensedir}${_pkgname}
+	#install -m644  ${srcdir}/${_pkgname}/LICENSE ${pkgdir}${_licensedir}${_pkgname}
+
+	install -dm755 ${pkgdir}${_destname1}
+	cp -r  ${srcdir}/${_pkgname}/root/${_destname1}* ${pkgdir}${_destname1}
+}
