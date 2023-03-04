@@ -7,3 +7,9 @@ post_install() {
 post_upgrade() {
     post_install
 }
+
+post_remove() {
+    echo -e "\n** We change the theme back to the default vimix theme **\n"
+    sed -i "s/radar/Vimix/g" /etc/default/grub
+    grub-mkconfig -o /boot/grub/grub.cfg  
+}
