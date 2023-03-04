@@ -1,14 +1,13 @@
 # Maintainer: Erik Dubois <erik.dubois@gmail.com>
 pkgname=edu-chadwm-git
 _pkgname=chadwm
-_destname1="/etc/skel/.config/"
-#_destname2="/usr/share/doc/dwm/"
+_destname1="/etc/"
+_destname2="/usr/"
 #_destname3="/usr/share/licenses/dwm/"
 #_destname4="/usr/share/man/man1/"
-_destname5="/usr/share/xsessions/"
 _licensedir="/usr/share/arcolinux/licenses/"
-pkgver=22.12
-pkgrel=01
+pkgver=23.02
+pkgrel=05
 pkgdesc="Configuration files for Chadwm"
 arch=('any')
 url="https://github.com/erikdubois/edu-chadwm"
@@ -20,14 +19,13 @@ depends=('xorg-server'
 			 'wget'
 			 'picom'
 			 'rofi'
-			 'arcolinux-rofi-git'
-			 'arcolinux-rofi-themes-git'
 			 'acpi'
 			 'imlib2'
 			 'slock'
 			 'imlib2'
 			 'ttf-material-design-iconic-font'
 			 'ttf-iosevka-nerd'
+			 'ttf-jetbrains-mono-nerd'
 			 'eww'
 			 'dash')
 optdepends=()
@@ -51,8 +49,8 @@ package() {
 	install -dm755 ${pkgdir}${_destname1}
 	cp -r  ${srcdir}/${_pkgname}/root/${_destname1}* ${pkgdir}${_destname1}
 
-	#install -dm755 ${pkgdir}${_destname2}
-	#cp -r  ${srcdir}/${_pkgname}${_destname2}* ${pkgdir}${_destname2}
+	install -dm755 ${pkgdir}${_destname2}
+	cp -r  ${srcdir}/${_pkgname}/root/${_destname2}* ${pkgdir}${_destname2}
 
 	#install -dm755 ${pkgdir}${_destname3}
 	#cp -r  ${srcdir}/${_pkgname}${_destname3}* ${pkgdir}${_destname3}
@@ -60,6 +58,6 @@ package() {
 	#install -dm755 ${pkgdir}${_destname4}
 	#cp -r  ${srcdir}/${_pkgname}${_destname4}* ${pkgdir}${_destname4}
 
-	install -dm755 ${pkgdir}${_destname5}
-	cp -r  ${srcdir}/${_pkgname}/root/${_destname5}* ${pkgdir}${_destname5}
+	#install -dm755 ${pkgdir}${_destname5}
+	#cp -r  ${srcdir}/${_pkgname}/root/${_destname5}* ${pkgdir}${_destname5}
 }
