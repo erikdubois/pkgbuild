@@ -1,14 +1,14 @@
 # Maintainer: Erik Dubois <erik.dubois@gmail.com>
-pkgname=edu-vimix-mono-grub-theme-git
-_pkgname=edu-vimix-mono-grub-theme
-destinationdir1="/usr/share/grub/themes/vimix"
-destinationdir2="/boot/grub/themes/vimix"
+pkgname=edu-ubuntu-grub-theme-git
+_pkgname=edu-ubuntu-grub-theme
+destinationdir1="/usr/share/grub/themes/ubuntu"
+destinationdir2="/boot/grub/themes/ubuntu"
 _licensedir="/usr/share/arcolinux/licenses/"
 pkgver=23.03
-pkgrel=20
+pkgrel=21
 pkgdesc="Grub theme for ArcoLinux -D -B from Edu"
 arch=(any)
-url="https://github.com/erikdubois/edu-vimix-mono-grub-theme"
+url="https://github.com/erikdubois/edu-ubuntu-grub-theme"
 license=('GPL3')
 optdepends=('grub-customizer')
 makedepends=('git')

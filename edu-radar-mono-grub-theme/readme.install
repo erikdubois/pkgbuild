@@ -1,5 +1,5 @@
 post_install() {
-    echo -e "\n** The files have been installed in /boot/grub/themes/vimix **\n"
+    echo -e "\n** The files have been installed in /boot/grub/themes/radar **\n"
     if grep -q GRUB_THEME /etc/default/grub ; then
         sed -i '/GRUB_THEME/c GRUB_THEME="/boot/grub/themes/radar/theme.txt"' /etc/default/grub
     else
