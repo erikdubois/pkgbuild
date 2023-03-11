@@ -46,7 +46,43 @@ if [[ "$response" == [yY] ]]; then
 
 		count=0
 
+		for name in $(ls -d edu-asus*grub*/); do
+			count=$[count+1]
+			cd $name
+			tput setaf 1;echo $name;echo "Github "$count;tput sgr0;
+			sed -i "s/\(^pkgver=\).*/\1$pkgver/" PKGBUILD
+			sed -i "s/\(^pkgrel=\).*/\1$pkgrel/" PKGBUILD
+			echo "#############################################################################################"
+			echo "################  "$(basename `pwd`)" done"
+			echo "#############################################################################################"
+			cd ..
+		done
+
+		for name in $(ls -d edu-bao*grub*/); do
+			count=$[count+1]
+			cd $name
+			tput setaf 1;echo $name;echo "Github "$count;tput sgr0;
+			sed -i "s/\(^pkgver=\).*/\1$pkgver/" PKGBUILD
+			sed -i "s/\(^pkgrel=\).*/\1$pkgrel/" PKGBUILD
+			echo "#############################################################################################"
+			echo "################  "$(basename `pwd`)" done"
+			echo "#############################################################################################"
+			cd ..
+		done
+
 		for name in $(ls -d edu-radar*grub*/); do
+			count=$[count+1]
+			cd $name
+			tput setaf 1;echo $name;echo "Github "$count;tput sgr0;
+			sed -i "s/\(^pkgver=\).*/\1$pkgver/" PKGBUILD
+			sed -i "s/\(^pkgrel=\).*/\1$pkgrel/" PKGBUILD
+			echo "#############################################################################################"
+			echo "################  "$(basename `pwd`)" done"
+			echo "#############################################################################################"
+			cd ..
+		done
+
+		for name in $(ls -d edu-ubuntu*grub*/); do
 			count=$[count+1]
 			cd $name
 			tput setaf 1;echo $name;echo "Github "$count;tput sgr0;
@@ -70,18 +106,53 @@ if [[ "$response" == [yY] ]]; then
 			cd ..
 		done
 
-		echo "#############################################################################################"
-		echo "###################                 Script finished                      ####################"
-		echo "#############################################################################################"
-
-    else
-    	echo "#############################################################################################"
-      echo "Nothing has been changed."
+else
+	echo "#############################################################################################"
+  echo "Nothing has been changed."
 fi
 
 count=0
 
+for name in $(ls -d edu-asus*grub*/); do
+		count=$[count+1]
+		echo
+		echo "Build " $name " - nr: " $count
+		echo
+		cd $name
+		./build*
+		echo "#############################################################################################"
+		echo "################  "$(basename `pwd`)" done"
+		echo "#############################################################################################"
+		cd ..
+done
+
+for name in $(ls -d edu-bao*grub*/); do
+		count=$[count+1]
+		echo
+		echo "Build " $name " - nr: " $count
+		echo
+		cd $name
+		./build*
+		echo "#############################################################################################"
+		echo "################  "$(basename `pwd`)" done"
+		echo "#############################################################################################"
+		cd ..
+done
+
 for name in $(ls -d edu-radar*grub*/); do
+		count=$[count+1]
+		echo
+		echo "Build " $name " - nr: " $count
+		echo
+		cd $name
+		./build*
+		echo "#############################################################################################"
+		echo "################  "$(basename `pwd`)" done"
+		echo "#############################################################################################"
+		cd ..
+done
+
+for name in $(ls -d edu-ubuntu*grub*/); do
 		count=$[count+1]
 		echo
 		echo "Build " $name " - nr: " $count

@@ -1,14 +1,14 @@
 # Maintainer: Erik Dubois <erik.dubois@gmail.com>
-pkgname=edu-bao-grub-theme-git
-_pkgname=edu-bao-grub-theme
-destinationdir1="/usr/share/grub/themes/bao"
-destinationdir2="/boot/grub/themes/bao"
+pkgname=edu-asus-grub-theme-git
+_pkgname=edu-asus-grub-theme
+destinationdir1="/usr/share/grub/themes/asus"
+destinationdir2="/boot/grub/themes/asus"
 _licensedir="/usr/share/arcolinux/licenses/"
 pkgver=23.03
-pkgrel=34
+pkgrel=31
 pkgdesc="Grub theme for ArcoLinux -D -B from Edu"
 arch=(any)
-url="https://github.com/erikdubois/edu-bao-grub-theme"
+url="https://github.com/erikdubois/edu-asus-grub-theme"
 license=('GPL3')
 optdepends=('grub-customizer')
 makedepends=('git')

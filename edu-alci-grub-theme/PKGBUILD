@@ -1,14 +1,14 @@
 # Maintainer: Erik Dubois <erik.dubois@gmail.com>
-pkgname=edu-bao-grub-theme-git
-_pkgname=edu-bao-grub-theme
-destinationdir1="/usr/share/grub/themes/bao"
-destinationdir2="/boot/grub/themes/bao"
+pkgname=edu-alci-grub-theme-git
+_pkgname=edu-alci-grub-theme
+destinationdir1="/usr/share/grub/themes/alci"
+destinationdir2="/boot/grub/themes/alci"
 _licensedir="/usr/share/arcolinux/licenses/"
 pkgver=23.03
 pkgrel=34
 pkgdesc="Grub theme for ArcoLinux -D -B from Edu"
 arch=(any)
-url="https://github.com/erikdubois/edu-bao-grub-theme"
+url="https://github.com/erikdubois/edu-alci-grub-theme"
 license=('GPL3')
 optdepends=('grub-customizer')
 makedepends=('git')
