@@ -39,7 +39,7 @@ if [[ $CHOICE == "1" ]] ; then
 
   tput setaf 2
   echo "#############################################################################################"
-  echo "#########        Let us build the package in CHROOT "$(basename `pwd`)
+  echo "#########        Let us build the package in CHROOT ~/Documents/chroot-data"
   echo "#############################################################################################"
   tput sgr0
   CHROOT=$HOME/Documents/chroot-data

@@ -6,8 +6,8 @@ _destname2="/usr/"
 #_destname3="/usr/share/licenses/dwm/"
 #_destname4="/usr/share/man/man1/"
 _licensedir="/usr/share/arcolinux/licenses/"
-pkgver=23.02
-pkgrel=05
+pkgver=24.02
+pkgrel=01
 pkgdesc="Configuration files for Chadwm"
 arch=('any')
 url="https://github.com/erikdubois/edu-chadwm"
@@ -26,6 +26,7 @@ depends=('xorg-server'
 			 'ttf-material-design-iconic-font'
 			 'ttf-iosevka-nerd'
 			 'ttf-jetbrains-mono-nerd'
+			 'ttf-meslo-nerd-font-powerlevel10k'
 			 'eww'
 			 'dash')
 optdepends=()

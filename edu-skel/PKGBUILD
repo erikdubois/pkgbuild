@@ -3,7 +3,7 @@ pkgname=edu-skel-git
 _pkgname=edu-skel
 _destname1="/"
 _licensedir="/usr/share/arcolinux/licenses/"
-pkgver=23.01
+pkgver=23.12
 pkgrel=02
 pkgdesc="Desktop configuration"
 arch=('any')
@@ -19,6 +19,9 @@ install='readme.install'
 package() {
 	#install -dm755 ${pkgdir}${_licensedir}${_pkgname}
 	#install -m644  ${srcdir}/${_pkgname}/LICENSE ${pkgdir}${_licensedir}${_pkgname}
+
+	rm ${srcdir}/${_pkgname}/root/up.sh
+	rm ${srcdir}/${_pkgname}/root/up+.sh
 
 	install -dm755 ${pkgdir}${_destname1}
 	cp -r  ${srcdir}/${_pkgname}/root/${_destname1}* ${pkgdir}${_destname1}

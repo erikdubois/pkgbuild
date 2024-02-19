@@ -51,14 +51,14 @@
 
 pkgname=edu-flameshot-git
 _pkgname=flameshot
-pkgver=r1867.3ededae5
-pkgrel=1
+pkgver=23.12
+pkgrel=01
 pkgdesc="Powerful yet simple to use screenshot software"
 arch=('i686' 'x86_64')
 url="https://github.com/flameshot-org/flameshot"
 license=('GPL')
-depends=(qt5-base hicolor-icon-theme qt5-svg grim)
-makedepends=(qt5-tools git cmake kguiaddons)
+depends=(kguiaddons5 qt5-base hicolor-icon-theme qt5-svg grim qt5-wayland)
+makedepends=(qt5-tools git cmake kguiaddons5)
 optdepends=('xdg-desktop-portal: To make Sway and wlroots work'
             'xdg-desktop-portal-wlr: To make Sway and wlroots work'
             'grim: To make Sway and wlroots work')
@@ -92,7 +92,8 @@ build() {
   cmake -S ./ \
       -DCMAKE_INSTALL_PREFIX=/usr \
       -DUSE_WAYLAND_CLIPBOARD=1  \
-      -DUSE_WAYLAND_GRIM=true
+      -DUSE_WAYLAND_GRIM=true  \
+      -DUSE_WAYLAND_CLIPBOARD=true
 
   make -j$(nproc --ignore 1)
 }

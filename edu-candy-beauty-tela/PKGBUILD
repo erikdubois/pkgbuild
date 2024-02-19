@@ -1,15 +1,15 @@
 # Maintainer: Erik Dubois <erik.dubois@gmail.com>
 pkgname=edu-candy-beauty-tela-git
 _pkgname=edu-candy-beauty-tela
-pkgver=22.02
-pkgrel=08
+pkgver=23.12
+pkgrel=01
 _destname1="/usr/share/icons/"
 _destname2="/usr/share/plasma/"
 pkgdesc="Beautyline icons completed for ArcoLinux + Candy icons + Tela"
 arch=('any')
 url="https://github.com/erikdubois/${_pkgname}.git"
 license=('GPL3')
-depends=('arcolinux-candy-beauty-git')
+depends=('a-candy-beauty-icon-theme-git')
 makedepends=('git')
 replaces=('arcolinux-candy-beauty-tela-git')
 provides=("${pkgname}")

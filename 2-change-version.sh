@@ -15,9 +15,9 @@ echo
 echo "This builds all the existing icons"
 echo "Scans the existing folders"
 echo "Be sure you have the highest number for all of them"
-echo
+echo "edu-flameshot-git keeps it reference even if we change it"
 echo "#############################################################################################"
-echo "Give the pkgversion number like 22.02"
+echo "Give the pkgversion number like 24.01"
 echo "#############################################################################################"
 
 read pkgver
