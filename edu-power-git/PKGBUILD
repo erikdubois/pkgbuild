@@ -3,16 +3,16 @@ pkgname=edu-power-git
 _pkgname=edu-power
 _destname1="/etc/skel/.config/"
 _destname2="/etc/skel/.local/share/"
-_destname3="/usr/share/sddm/themes/Monterey-dark/"
+#_destname3="/usr/share/sddm/themes/Monterey-dark/"
 _licensedir="/usr/share/arcolinux/licenses/"
 pkgver=24.02
-pkgrel=09
+pkgrel=20
 pkgdesc="ArcoLinuxB Plasma power Desktop Settings"
 arch=('any')
 url="https://github.com/erikdubois/power"
 license=('GPL3')
 makedepends=('git')
-depends=()
+depends=('latte-dock')
 conflicts=(
 	'arcolinux-plasma-nemesis-git'
 	'arcolinux-plasma-git'
@@ -21,6 +21,8 @@ conflicts=(
 	'arcolinux-xfce-git'
 	'arcolinux-config-all-desktops-git'
 	'arcolinux-gtk3-surfn-arc-git'
+	'arcolinux-dconf-all-desktops-git'
+	'arcolinux-gtk3-surfn-plasma-dark-git'
 )
 provides=("${pkgname}")
 options=(!strip !emptydirs)
@@ -37,6 +39,6 @@ package() {
 	install -dm755 ${pkgdir}${_destname2}
 	cp -r  ${srcdir}/${_pkgname}${_destname2}* ${pkgdir}${_destname2}
 
-	install -dm755 ${pkgdir}${_destname3}
-	cp -r  ${srcdir}/${_pkgname}${_destname3}* ${pkgdir}${_destname3}	
+	#install -dm755 ${pkgdir}${_destname3}
+	#cp -r  ${srcdir}/${_pkgname}${_destname3}* ${pkgdir}${_destname3}	
 }
