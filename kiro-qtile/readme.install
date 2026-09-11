@@ -1,5 +1,9 @@
 post_install() {
     echo -e "\n** The files have been installed in /etc/skel/.config/qtile **\n"
+    # The pacman hook only fires when a qtile.desktop is part of the
+    # transaction, so installing kiro-qtile on a box that already has qtile
+    # would otherwise leave the broken upstream Exec= in place.
+    /usr/bin/kiro-qtile-fix-session || true
 }
 
 post_upgrade() {
