@@ -1,5 +1,21 @@
 # Changelog
 
+## 2026.09.12
+
+### What Changed
+- **`kiro-polybar` — `pkgdesc` still carried the pre-rename EDU branding.** It read
+  `"Polybar configuration for edu"`; now `"Polybar configuration for Kiro"`. Leftover from the
+  `edu-polybar-git` → `kiro-polybar` rename (the `replaces`/`conflicts` entries for the old name are
+  intentional and were left in place).
+
+### Technical Details
+- `pkgver`/`pkgrel` were **not** touched — `build.sh` auto-bumps them (`pkgver=$(date +%y.%m)`,
+  `pkgrel` reset to `01` on a version change), so a manual edit would be overwritten at build time.
+  The description change reaches users on the next rebuild.
+
+### Files Modified
+- `kiro-polybar/PKGBUILD`
+
 ## 2026.08.23
 
 ### What Changed
